@@ -5,10 +5,10 @@ RULES = {
     "eval(": "Dangerous dynamic execution",
     "exec(": "Dangerous code execution",
     "innerHTML": "Potential XSS sink",
-    "SECRET_KEY": "Possible secret",
-    "API_KEY": "Possible API key",
-    "TOKEN=": "Possible token",
-    "PASSWORD=": "Hardcoded credential"
+    "password": "Hardcoded credential",
+    "secret": "Possible secret",
+    "token": "Possible token",
+    "api_key": "Possible API key"
 }
 
 SUPPORTED = {
@@ -40,12 +40,15 @@ def review(folder="."):
                 errors="ignore"
             )
 
+            lower = text.lower()
+
             for pattern, description in RULES.items():
 
-                if pattern in text:
+                if pattern.lower() in lower:
 
                     findings.append({
                         "file": path.name,
+                        "pattern": pattern,
                         "description": description
                     })
 
@@ -53,3 +56,4 @@ def review(folder="."):
             pass
 
     return findings
+

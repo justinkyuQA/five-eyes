@@ -256,3 +256,41 @@ Raw findings are useful.
 Risk scoring turns findings into prioritization.
 
 
+## v0.1.0 — First Complete Pipeline
+
+Status: Complete
+
+### Eyes
+
+- Eye One — Structure ✓
+- Eye Two — Rules ✓
+- Eye Three — Scope Controls ✓
+- Eye Four — Risk Scoring ✓
+- Eye Five — Reporting ✓
+
+### Evidence
+
+Screenshot:
+
+![Eye Five](screenshots/fiveeyesfive.jpg)
+
+Tag:
+
+#eyefive
+
+### Output
+
+- Files Scanned: 6
+- Total Lines: 230
+- Risk Score: 17
+- Risk Level: HIGH
+
+### Reports Generated
+
+- report.json
+- report.md
+
+### Milestone
+
+First end-to-end Five Eyes pipeline completed.
+

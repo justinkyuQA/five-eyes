@@ -1,11 +1,9 @@
 # Five Eyes Report
 
-Risk Score: 17
+Risk Score: 4
 
-Risk Level: HIGH
+Risk Level: LOW
 
 ## Findings
 
-- test.js : Dangerous dynamic execution
-- test.js : Potential XSS sink
-- test.js : Hardcoded credential
+- index.html : Potential XSS sink

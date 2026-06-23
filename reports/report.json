@@ -1,23 +1,12 @@
 {
   "findings": [
     {
-      "file": "test.js",
-      "pattern": "eval(",
-      "description": "Dangerous dynamic execution"
-    },
-    {
-      "file": "test.js",
-      "pattern": "innerHTML",
+      "file": "index.html",
       "description": "Potential XSS sink"
-    },
-    {
-      "file": "test.js",
-      "pattern": "password",
-      "description": "Hardcoded credential"
     }
   ],
   "score": {
-    "score": 17,
-    "risk": "HIGH"
+    "score": 4,
+    "risk": "LOW"
   }
 }

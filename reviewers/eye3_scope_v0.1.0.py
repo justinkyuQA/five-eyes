@@ -1,15 +1,7 @@
 IGNORE_DIRS = {
     ".git",
     "__pycache__",
-    "reviewers",
-    "venv",
-    ".venv",
-    "env",
-    "site-packages",
-    "dist-packages",
-    "node_modules",
-    ".pytest_cache",
-    ".mypy_cache"
+    "reviewers"
 }
 
 IGNORE_FILES = {
@@ -19,12 +11,14 @@ IGNORE_FILES = {
 
 def should_scan(path):
 
-    for part in path.parts:
+    parts = set(path.parts)
 
-        if part in IGNORE_DIRS:
+    for item in IGNORE_DIRS:
+        if item in parts:
             return False
 
     if path.name in IGNORE_FILES:
         return False
 
     return True
+
