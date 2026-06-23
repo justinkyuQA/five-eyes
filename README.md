@@ -1,87 +1,94 @@
 # Five Eyes
 
-Five Eyes is a local-first code review pipeline.
+Five Eyes is a local-first code review and risk analysis pipeline built around independent reviewers ("Eyes").
 
-It uses five simple review stages:
+Each Eye performs a focused task and passes structured findings forward, allowing code to be analyzed incrementally before requiring human review or larger reasoning systems.
 
-1. Structure
-2. Rules
-3. Patterns
-4. Scoring
-5. Reporting
+---
 
-The goal is to turn source files into structured findings before any large model or human reviewer needs to inspect them.
+# Development Timeline
 
-## Run
-
-```bash
-python3 scanner.py test_project
-
-
-Development Timeline
-
-v0.0.1 — Architecture Foundation
+## v0.0.1 — Architecture Foundation
 
 - Repository established
-- Project philosophy documented
+- Philosophy documented
 - Architecture documented
 - Roadmap documented
-- Initial release notes created
 
-v0.0.2 — Eye One Prototype
+---
+
+## v0.0.2 — Eye One Scanner
 
 - File discovery implemented
 - Line counting implemented
 - Extension classification implemented
-- First executable scanner released
+- First executable reviewer released
 
-v0.0.3 — Rule Detection Prototype
+---
 
-- Basic rule engine implemented
-- Detection patterns added:
-  - eval(
-  - exec(
-  - innerHTML
-  - password
-  - secret
-  - token
-  - api_key
+## v0.0.3 — Rule Detection Prototype
+
+- Pattern matching implemented
+- Detection patterns added
 - First security findings generated
 
-v0.0.4 — Eye One Modular Architecture
+---
+
+## v0.0.4 — Eye One Modular Architecture
 
 Status: Complete
 
-Achievements
+### Achievements
 
 - Reviewer architecture established
 - Eye One extracted into independent module
 - Scanner converted into orchestration layer
 - Foundation established for Eyes Two through Five
 
-Evidence
+### Evidence
 
 Screenshot:
-screenshots/fiveeyesone.jpg
+
+![Eye One](screenshots/fiveeyesone.jpg)
 
 Tag:
+
 #eyeone
 
-Output
+Output:
 
-Files Scanned: 6
+- Files Scanned: 6
+- Total Lines: 154
 
-Total Lines: 154
-
-Lesson Learned
+### Lesson Learned
 
 Stable reviewers should be added, not repeatedly rewritten.
 
-New capabilities should arrive as new Eyes rather than by continuously modifying existing Eyes.
+New capabilities should arrive as new Eyes rather than continuously modifying existing Eyes.
 
-Current Status
+---
 
-Eye One: Complete ✓
+# Current Status
 
-Eye Two: Next
+- Eye One: Complete ✓
+- Eye Two: Next
+- Eye Three: Planned
+- Eye Four: Planned
+- Eye Five: Planned
+
+---
+
+# Vision
+
+Eye One  -> Structure
+
+Eye Two  -> Rules
+
+Eye Three -> Patterns
+
+Eye Four -> Scoring
+
+Eye Five -> Reporting
+
+Each Eye should be independently testable, independently releasable, and independently understandable.
 
