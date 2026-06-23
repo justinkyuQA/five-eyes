@@ -1,5 +1,4 @@
 from pathlib import Path
-from reviewers.eye3_scope import should_scan
 
 SUPPORTED = {
     ".py",
@@ -18,9 +17,6 @@ def review(folder="."):
         if not path.is_file():
             continue
 
-        if not should_scan(path):
-            continue
-
         if path.suffix.lower() not in SUPPORTED:
             continue
 
@@ -32,7 +28,9 @@ def review(folder="."):
             )
 
             files_scanned += 1
-            total_lines += len(text.splitlines())
+            total_lines += len(
+                text.splitlines()
+            )
 
         except Exception:
             pass
@@ -41,4 +39,3 @@ def review(folder="."):
         "files_scanned": files_scanned,
         "total_lines": total_lines
     }
-

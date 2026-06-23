@@ -1,5 +1,4 @@
 from pathlib import Path
-from reviewers.eye3_scope import should_scan
 
 RULES = {
     "eval(": "Dangerous dynamic execution",
@@ -27,9 +26,6 @@ def review(folder="."):
         if not path.is_file():
             continue
 
-        if not should_scan(path):
-            continue
-
         if path.suffix.lower() not in SUPPORTED:
             continue
 
@@ -46,11 +42,13 @@ def review(folder="."):
 
                 if pattern.lower() in lower:
 
-                    findings.append({
-                        "file": path.name,
-                        "pattern": pattern,
-                        "description": description
-                    })
+                    findings.append(
+                        {
+                            "file": path.name,
+                            "pattern": pattern,
+                            "description": description
+                        }
+                    )
 
         except Exception:
             pass

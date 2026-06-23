@@ -180,3 +180,41 @@ Eye Three: Next
 Eye Four: Planned
 
 Eye Five: Planned
+## v0.0.7 — Eye Three Scope Controls
+
+Status: Complete
+
+### Achievements
+
+- Scope controls integrated into pipeline
+- Reviewer self-scanning eliminated
+- Internal framework files excluded
+- Target-focused analysis established
+
+### Evidence
+
+Screenshot:
+
+![Eye Three](screenshots/fiveeyetre.jpg)
+
+Tag:
+
+#eyethree
+
+### Output
+
+Files Scanned: 4
+
+Total Lines: 144
+
+Findings:
+
+- Dangerous dynamic execution
+- Potential XSS sink
+- Hardcoded credential
+
+### Lesson Learned
+
+A reviewer must understand what not to review.
+
+Effective analysis requires scope selection before analysis begins.
