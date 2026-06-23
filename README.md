@@ -106,10 +106,10 @@ Status: Complete
 ### Evidence
 
 Screenshot:
-screenshots/fiveeyestwo.jpg
+screenshots/fiveeyestoo.jpg
 
 Tag:
-#eyetwo
+#eyetoo
 
 ### Findings Detected
 
@@ -126,3 +126,57 @@ Tag:
 Reviewers can accidentally review themselves.
 
 Future versions should support scope controls and exclusions.
+## v0.0.5 — Eye Two Rule Reviewer
+
+Status: Complete
+
+### Achievements
+
+- Independent Eye Two reviewer created
+- Rule-based detection implemented
+- Multi-reviewer architecture proven
+- Structure reviewer and rule reviewer operating together
+
+### Evidence
+
+Screenshot:
+
+![Eye Two](screenshots/fiveeyestoo.jpg)
+
+Tag:
+
+#eyetoo
+
+### Findings Detected
+
+- Dangerous dynamic execution
+- Dangerous code execution
+- Potential XSS sink
+- Hardcoded credential
+- Possible secret
+- Possible token
+- Possible API key
+
+### Output
+
+Files Scanned: 8
+
+Total Lines: 251
+
+### Lesson Learned
+
+Reviewers can accidentally review themselves.
+
+Future versions should support exclusions and scope controls so Five Eyes can review external projects without generating findings from its own implementation files.
+
+### Current Status
+
+Eye One: Complete ✓
+
+Eye Two: Complete ✓
+
+Eye Three: Next
+
+Eye Four: Planned
+
+Eye Five: Planned
