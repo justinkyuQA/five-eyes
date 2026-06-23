@@ -218,3 +218,41 @@ Findings:
 A reviewer must understand what not to review.
 
 Effective analysis requires scope selection before analysis begins.
+## v0.0.8 — Eye Four Risk Scoring
+
+Status: Complete
+
+### Achievements
+
+- Risk scoring engine implemented
+- Findings weighted by severity
+- Risk level calculation added
+- Executive-style output introduced
+
+### Evidence
+
+Screenshot:
+
+![Eye Four](screenshots/fiveeyesfore.jpg)
+
+Tag:
+
+#eyefour
+
+### Output
+
+Files Scanned: 5
+
+Total Lines: 177
+
+Score: 17
+
+Level: HIGH
+
+### Lesson Learned
+
+Raw findings are useful.
+
+Risk scoring turns findings into prioritization.
+
+
