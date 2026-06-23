@@ -92,3 +92,37 @@ Eye Five -> Reporting
 
 Each Eye should be independently testable, independently releasable, and independently understandable.
 
+## v0.0.5 — Eye Two Rule Reviewer
+
+Status: Complete
+
+### Achievements
+
+- Independent Eye Two reviewer created
+- Rule-based detection implemented
+- Dangerous pattern detection added
+- Multi-reviewer architecture proven
+
+### Evidence
+
+Screenshot:
+screenshots/fiveeyestwo.jpg
+
+Tag:
+#eyetwo
+
+### Findings Detected
+
+- Dangerous dynamic execution
+- Dangerous code execution
+- Potential XSS sink
+- Hardcoded credential
+- Possible secret
+- Possible token
+- Possible API key
+
+### Lesson Learned
+
+Reviewers can accidentally review themselves.
+
+Future versions should support scope controls and exclusions.
