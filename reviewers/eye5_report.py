@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from datetime import datetime
 
 def review(findings, score):
 
@@ -25,6 +26,11 @@ def review(findings, score):
         f.write("# Five Eyes Report\n\n")
 
         f.write(
+            f"Generated: "
+            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+        )
+
+        f.write(
             f"Risk Score: "
             f"{score['score']}\n\n"
         )
@@ -34,13 +40,21 @@ def review(findings, score):
             f"{score['risk']}\n\n"
         )
 
+        f.write(
+            f"Findings Count: "
+            f"{len(findings)}\n\n"
+        )
+
         f.write("## Findings\n\n")
 
-        for finding in findings:
-
-            f.write(
-                f"- {finding['file']} : "
-                f"{finding['description']}\n"
-            )
+        if not findings:
+            f.write("- No findings detected\n")
+        else:
+            for finding in findings:
+                f.write(
+                    f"- {finding['file']} : "
+                    f"{finding['description']}\n"
+                )
 
     return str(json_path), str(md_path)
+

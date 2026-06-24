@@ -1,3 +1,74 @@
+Five Eyes
+
+Five Eyes is a local-first security inspection pipeline that analyzes source code and produces actionable findings, risk scores, health assessments, reports, and historical snapshots.
+
+Rather than relying on large cloud-hosted systems, Five Eyes processes projects through a chain of focused review stages ("Eyes"), allowing findings to be collected, classified, scored, and preserved locally.
+
+Features
+
+- Local-first operation
+- Multi-stage review pipeline
+- Security finding detection
+- Risk scoring
+- Confidence scoring
+- Project health assessment
+- Markdown and JSON reports
+- Historical scan memory
+- No network connection required
+
+Example Workflow
+
+Project
+→ Five Eyes
+→ Findings
+→ Risk Score
+→ Health Score
+→ Report
+→ History Snapshot
+
+Example Findings
+
+- Dangerous dynamic execution
+- Potential XSS sink
+- Missing project documentation
+- Missing project artifacts
+- Project health issues
+
+Screenshots
+
+- Empty Project Health Audit
+- Live Security Findings
+- Architecture Overview
+- Generated Report Output
+
+Current Status
+
+Version: v0.2.0
+
+Status: Functional Release Candidate
+
+Capabilities:
+
+- Structure Review
+- Rule Review
+- Risk Assessment
+- Confidence Assessment
+- Project Health Analysis
+- Report Generation
+- Historical Snapshot Storage
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Five Eyes
 
 Five Eyes is a local-first code review and risk analysis pipeline built around independent reviewers ("Eyes").
